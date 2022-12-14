@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Wed Dec 14 17:25:42 2022
+| Date             : Wed Dec 14 21:39:45 2022
 | Host             : Byron running 64-bit major release  (build 9200)
 | Command          : report_power -file led_power_routed.rpt -pb led_power_summary_routed.pb -rpx led_power_routed.rpx
 | Design           : led
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 6.160        |
+| Total On-Chip Power (W)  | 8.987        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 6.026        |
-| Device Static (W)        | 0.134        |
+| Dynamic (W)              | 8.816        |
+| Device Static (W)        | 0.171        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 56.9         |
-| Junction Temperature (C) | 53.1         |
+| Max Ambient (C)          | 44.0         |
+| Junction Temperature (C) | 66.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.024 |       73 |       --- |             --- |
+| Slice Logic    |     0.042 |       72 |       --- |             --- |
 |   CARRY4       |     0.017 |        8 |     15850 |            0.05 |
+|   LUT as Logic |     0.016 |       13 |     63400 |            0.02 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   LUT as Logic |    <0.001 |       13 |     63400 |            0.02 |
-|   Register     |    <0.001 |       48 |    126800 |            0.04 |
+|   Register     |     0.004 |       48 |    126800 |            0.04 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.046 |       79 |       --- |             --- |
-| I/O            |     5.957 |       26 |       210 |           12.38 |
-| Static Power   |     0.134 |          |           |                 |
-| Total          |     6.160 |          |           |                 |
+| Signals        |     0.102 |       78 |       --- |             --- |
+| I/O            |     8.672 |       26 |       210 |           12.38 |
+| Static Power   |     0.171 |          |           |                 |
+| Total          |     8.987 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.151 |       0.106 |      0.045 |
-| Vccaux    |       1.800 |     0.238 |       0.217 |      0.021 |
-| Vcco33    |       3.300 |     1.680 |       1.676 |      0.004 |
+| Vccint    |       1.000 |     0.255 |       0.180 |      0.075 |
+| Vccaux    |       1.800 |     0.342 |       0.316 |      0.025 |
+| Vcco33    |       3.300 |     2.448 |       2.444 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -138,7 +138,7 @@ Table of Contents
 +------+-----------+
 | Name | Power (W) |
 +------+-----------+
-| led  |     6.026 |
+| led  |     8.816 |
 +------+-----------+
 
 

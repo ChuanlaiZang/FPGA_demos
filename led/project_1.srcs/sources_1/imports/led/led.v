@@ -1,5 +1,5 @@
 module led(
-	input clk,
+	input clk,//100MHz
 	input rst,
 	input [7:0] sw,
 	output [15:0] ledr
@@ -15,7 +15,7 @@ module led(
 		else begin
 			if (count == 0)
 				led <= {led[6:0], led[7]};
-			count <= (count >= 50000 ? 32'b0 : count + 1);
+			count <= (count >= 100000000 ? 32'b0 : count + 1);
 			end
 	end
 	assign ledr = {led, sw};
